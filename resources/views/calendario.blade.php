@@ -51,11 +51,50 @@
     <div class="row">
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
             <ul class="nav nav-pills flex-column">
-                <div class="principal">
+                <div  href="#" class="list-group-item active">
                     <div class="wrap">
                         <form class="formulario" action="">
-                            <input type="text" id="tareaInput" placeholder="Agrega tu tarea">
-                            <input type="button" class="boton" id="btn-agregar" value="Agregar Tarea">
+                            <div class="form-group">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item active">
+                                        <h2 ALIGN=center style="color:white";>Lista de Tareas</h2>
+                                    </a>
+                                    <a href="#" class="list-group-item" >
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input">
+                                            Check me out
+                                        </label>
+                                    </a>
+                                    <a href="#" class="list-group-item" >
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input">
+                                            Check me out
+                                        </label>
+                                    </a>
+                                    <a href="#" class="list-group-item" >
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input">
+                                            Check me out
+                                        </label>
+                                    </a><a href="#" class="list-group-item" >
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input">
+                                            Check me out
+                                        </label>
+                                    </a><a href="#" class="list-group-item" >
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input">
+                                            Check me out
+                                        </label>
+                                    </a>
+
+
+
+                                </div>
+                            </div>
+                            <div class="offset-sm-2 col-sm-10">
+                                <button type="submit" class="btn btn-danger"><h2 style="color:white";>Agregar</h2></button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -70,7 +109,9 @@
                         <div class="wrap">
                             <ul class="lista" id="lista" title="LUNES">
                                 <li>
-                                <h1>Lunes</h1>
+                                    <a href="#" class="list-group-item active">
+                                        <h1  ALIGN=center style="color:white";>Lunes</h1>
+                                    </a>
                                 </li>
                                 <li><a href="#">1 Lorem ipsum dolor sit amet.</a></li>
                                 <li><a href="#">2 Lorem ipsum dolor sit amet.</a></li>
@@ -84,7 +125,9 @@
                         <div class="wrap">
                             <ul class="lista" id="lista" title="LUNES">
                                 <li>
-                                    <h1>Martes</h1>
+                                    <a href="#" class="list-group-item active">
+                                        <h1 ALIGN=center style="color:white";>Sabado</h1>
+                                    </a>
                                 </li>
                                 <li><a href="#">1 Lorem ipsum dolor sit amet.</a></li>
                                 <li><a href="#">2 Lorem ipsum dolor sit amet.</a></li>
@@ -98,7 +141,9 @@
                         <div class="wrap">
                             <ul class="lista" id="lista" title="LUNES">
                                 <li>
-                                    <h1>Miercoles</h1>
+                                    <a href="#" class="list-group-item active">
+                                        <h1 ALIGN=center style="color:white"; >Lunes</h1>
+                                    </a>
                                 </li>
                                 <li><a href="#">1 Lorem ipsum dolor sit amet.</a></li>
                                 <li><a href="#">2 Lorem ipsum dolor sit amet.</a></li>
@@ -112,7 +157,9 @@
                         <div class="wrap">
                             <ul class="lista" id="lista" title="LUNES">
                                 <li>
-                                    <h1>Jueves</h1>
+                                    <a href="#" class="list-group-item active">
+                                        <h1 ALIGN=center style="color:white"; >Lunes</h1>
+                                    </a>
                                 </li>
                                 <li><a href="#">1 Lorem ipsum dolor sit amet.</a></li>
                                 <li><a href="#">2 Lorem ipsum dolor sit amet.</a></li>
@@ -126,7 +173,26 @@
                         <div class="wrap">
                             <ul class="lista" id="lista" title="LUNES">
                                 <li>
-                                    <h1>Viernes</h1>
+                                    <a href="#" class="list-group-item active">
+                                        <h1 ALIGN=center style="color:white";>Lunes</h1>
+                                    </a>
+                                </li>
+                                <li><a href="#">1 Lorem ipsum dolor sit amet.</a></li>
+                                <li><a href="#">2 Lorem ipsum dolor sit amet.</a></li>
+                                <li><a href="#">3 Lorem ipsum dolor sit amet.</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a>
+                    <div class="tareas">
+                        <div class="wrap">
+                            <ul class="lista" id="lista" title="LUNES">
+
+                                <li>
+                                    <a href="#" class="list-group-item active">
+                                        <h1  ALIGN=center style="color:white";>Sabado</h1>
+                                    </a>
                                 </li>
                                 <li><a href="#">1 Lorem ipsum dolor sit amet.</a></li>
                                 <li><a href="#">2 Lorem ipsum dolor sit amet.</a></li>
@@ -140,21 +206,9 @@
                         <div class="wrap">
                             <ul class="lista" id="lista" title="LUNES">
                                 <li>
-                                    <h1>Sabado</h1>
-                                </li>
-                                <li><a href="#">1 Lorem ipsum dolor sit amet.</a></li>
-                                <li><a href="#">2 Lorem ipsum dolor sit amet.</a></li>
-                                <li><a href="#">3 Lorem ipsum dolor sit amet.</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </a>
-                <a>
-                    <div class="tareas">
-                        <div class="wrap">
-                            <ul class="lista" id="lista" title="LUNES">
-                                <li>
-                                    <h1>Domingo</h1>
+                                    <a href="#" class="list-group-item active">
+                                        <h1 ALIGN=center style="color:white";>Lunes</h1>
+                                    </a>
                                 </li>
                                 <li><a href="#">1 Lorem ipsum dolor sit amet.</a></li>
                                 <li><a href="#">2 Lorem ipsum dolor sit amet.</a></li>
