@@ -15,46 +15,46 @@
         <option class="panel-button" data-panelid="4" name="ubicacion" value="0"> Personalizar</option>
     </select>
 
-    <input type="submit" class="btn btn-primary">
+
 </div>
 <div class="panel panel-default" id="dis" disabled="true">
     <!-- Default panel contents -->
-    <div class="panel-heading">Panel heading</div>
+    <div class="panel-heading">Creacion de tareas </div>
     <!-- Table -->
     <table class="table">
         <tr>
         @for($i=0;$i<6;++$i)
-            <td><input type="checkbox" name="habitaciones[]" value="{{$habitaciones[$i]->id}}">
+            <td><input type="checkbox" class="piso1" name="habitaciones[]" value="{{$habitaciones[$i]->id}}">
                 {{$habitaciones[$i]->identificador}}</td>
         @endfor
         </tr>
         <tr>
             @for(;$i<6*2;++$i)
-                <td><input type="checkbox" name="habitaciones[]" value="{{$habitaciones[$i]->id}}">
+                <td><input type="checkbox" class="piso2" name="habitaciones[]" value="{{$habitaciones[$i]->id}}">
                     {{$habitaciones[$i]->identificador}}</td>
             @endfor
         </tr>
         <tr>
             @for(;$i<6*3;++$i)
-                <td><input type="checkbox" name="habitaciones[]" value="{{$habitaciones[$i]->id}}">
+                <td><input type="checkbox" class="piso3" name="habitaciones[]" value="{{$habitaciones[$i]->id}}">
                     {{$habitaciones[$i]->identificador}}</td>
             @endfor
         </tr>
         <tr>
             @for(;$i<6*4;++$i)
-                <td><input type="checkbox" name="habitaciones[]" value="{{$habitaciones[$i]->id}}">
+                <td><input type="checkbox" class="piso4" name="habitaciones[]" value="{{$habitaciones[$i]->id}}">
                     {{$habitaciones[$i]->identificador}}</td>
             @endfor
         </tr>
         <tr>
             @for(;$i<6*5;++$i)
-                <td><input type="checkbox" name="habitaciones[]" value="{{$habitaciones[$i]->id}}">
+                <td><input type="checkbox" class="piso5" name="habitaciones[]" value="{{$habitaciones[$i]->id}}">
                     {{$habitaciones[$i]->identificador}}</td>
             @endfor
         </tr>
         <tr>
             @for(;$i<6*6;++$i)
-                <td><input type="checkbox" name="habitaciones[]" value="{{$habitaciones[$i]->id}}">
+                <td><input type="checkbox" class="piso6" name="habitaciones[]" value="{{$habitaciones[$i]->id}}">
                     {{$habitaciones[$i]->identificador}}</td>
             @endfor
         </tr>
@@ -64,16 +64,24 @@
     </table>
 </div>
 
+<input type="submit" class="btn btn-primary">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script>
     $(function(){
         $('#sel1').change(function () {
             var e = document.getElementById("sel1");
             var strUser = e.options[e.selectedIndex].value;
-            if(strUser==0){
-                $('#dis').toggle(true);
-            }else{
-                $('#dis').toggle(false);
+
+            if(strUser!=0){
+
+                for(var i=1;i<=6;++i){
+                    if(i!=strUser){
+                        $('.piso'+i).attr('checked',false);
+                    }else{
+                        $('.piso'+strUser).attr('checked',true);
+                    }
+                }
             }
         });
 
