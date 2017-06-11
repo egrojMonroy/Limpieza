@@ -92,7 +92,35 @@
 
                                 </div>
                             </div>
-                            <div class="offset-sm-2 col-sm-10">
+                            <div class="form-group">
+                                <label class="col-xs-3 control-label">Empleado</label>
+                                <div class="col-xs-5 selectContainer">
+                                    <select class="form-control" name="size">
+                                        <option value="">Choose a size</option>
+                                        <option value="s">Small (S)</option>
+                                        <option value="m">Medium (M)</option>
+                                        <option value="l">Large (L)</option>
+                                        <option value="xl">Extra large (XL)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-3 control-label">Dia</label>
+                                <div class="col-xs-5 selectContainer">
+                                    <select class="form-control" name="size">
+                                        <option value="">Choose a size</option>
+                                        <option value="s">Small (S)</option>
+                                        <option value="m">Medium (M)</option>
+                                        <option value="l">Large (L)</option>
+                                        <option value="xl">Extra large (XL)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                    </div>
+
+
+                    <div class="offset-sm-2 col-sm-10">
                                 <button type="submit" class="btn btn-danger"><h2 style="color:white";>Agregar</h2></button>
                             </div>
                         </form>
@@ -101,7 +129,7 @@
             </ul>
         </nav>
 
-        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-1">
             <div class="tareas"><li><h1 ALIGN=center>CRONOGRAMA</h1></li></div>
             <div class="form-inline">
                 <a>
@@ -126,7 +154,7 @@
                             <ul class="lista" id="lista" title="LUNES">
                                 <li>
                                     <a href="#" class="list-group-item active">
-                                        <h1 ALIGN=center style="color:white";>Sabado</h1>
+                                        <h1 ALIGN=center style="color:white";>Martes</h1>
                                     </a>
                                 </li>
                                 <li><a href="#">1 Lorem ipsum dolor sit amet.</a></li>
@@ -142,7 +170,7 @@
                             <ul class="lista" id="lista" title="LUNES">
                                 <li>
                                     <a href="#" class="list-group-item active">
-                                        <h1 ALIGN=center style="color:white"; >Lunes</h1>
+                                        <h1 ALIGN=center style="color:white"; >Miercoles</h1>
                                     </a>
                                 </li>
                                 <li><a href="#">1 Lorem ipsum dolor sit amet.</a></li>
@@ -158,7 +186,7 @@
                             <ul class="lista" id="lista" title="LUNES">
                                 <li>
                                     <a href="#" class="list-group-item active">
-                                        <h1 ALIGN=center style="color:white"; >Lunes</h1>
+                                        <h1 ALIGN=center style="color:white"; >Jueves</h1>
                                     </a>
                                 </li>
                                 <li><a href="#">1 Lorem ipsum dolor sit amet.</a></li>
@@ -174,7 +202,7 @@
                             <ul class="lista" id="lista" title="LUNES">
                                 <li>
                                     <a href="#" class="list-group-item active">
-                                        <h1 ALIGN=center style="color:white";>Lunes</h1>
+                                        <h1 ALIGN=center style="color:white";>Viernes</h1>
                                     </a>
                                 </li>
                                 <li><a href="#">1 Lorem ipsum dolor sit amet.</a></li>
@@ -207,7 +235,7 @@
                             <ul class="lista" id="lista" title="LUNES">
                                 <li>
                                     <a href="#" class="list-group-item active">
-                                        <h1 ALIGN=center style="color:white";>Lunes</h1>
+                                        <h1 ALIGN=center style="color:white";>Domingo</h1>
                                     </a>
                                 </li>
                                 <li><a href="#">1 Lorem ipsum dolor sit amet.</a></li>
