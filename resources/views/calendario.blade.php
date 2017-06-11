@@ -116,20 +116,17 @@
                                     </select>
                                 </div>
                             </div>
-
-                    </div>
-
-
-                    <div class="offset-sm-2 col-sm-10">
+                            <div class=" col-sm-2">
                                 <button type="submit" class="btn btn-danger"><h2 style="color:white";>Agregar</h2></button>
                             </div>
+                    </div>
                         </form>
                     </div>
                 </div>
             </ul>
         </nav>
 
-        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-1">
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-">
             <div class="tareas"><li><h1 ALIGN=center>CRONOGRAMA</h1></li></div>
             <div class="form-inline">
                 <a>
