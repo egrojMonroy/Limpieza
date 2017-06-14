@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('habitaciones','HabitacionesController@index');
 Route::get('prueba','AsignacionController@index');
 Route::get('ruta_limpieza','Ruta_limpiezaController@index');
@@ -28,5 +24,7 @@ Route::get('habitaciones/store_mant/','HabitacionesController@store_mant');
 Route::get('ruta_limpieza/save','Ruta_limpiezaController@save');
 Route::get('ruta_limpieza/mantenimiento','Ruta_limpiezaController@mantenimiento');
 Route::get('creacion','CreacionController@index');
-
+Route::get('creacion/store','CreacionController@store');
+Route::get('/','LoginController@index');
+Route::get('/login','LoginController@store');
 ///end Jorge
