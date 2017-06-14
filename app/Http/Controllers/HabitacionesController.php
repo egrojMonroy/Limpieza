@@ -13,11 +13,12 @@ class HabitacionesController extends Controller
 {
     public function index()
     {
+
         return view('habitaciones')->with(['habitacion'=>1]);
     }
     public function limpieza($id_hab)
     {
-        $objetos = Dependencia_has_objeto::query()
+            $objetos = Dependencia_has_objeto::query()
             ->join('objetos','objetos.id','=','objeto_id')
             ->where('dependencia_id','=',1)
             ->get();

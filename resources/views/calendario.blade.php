@@ -59,36 +59,15 @@
                                     <a href="#" class="list-group-item active">
                                         <h2 ALIGN=center style="color:white";>Lista de Tareas</h2>
                                     </a>
-                                    <a href="#" class="list-group-item" >
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input">
-                                            Check me out
-                                        </label>
-                                    </a>
-                                    <a href="#" class="list-group-item" >
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input">
-                                            Check me out
-                                        </label>
-                                    </a>
-                                    <a href="#" class="list-group-item" >
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input">
-                                            Check me out
-                                        </label>
-                                    </a><a href="#" class="list-group-item" >
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input">
-                                            Check me out
-                                        </label>
-                                    </a><a href="#" class="list-group-item" >
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input">
-                                            Check me out
-                                        </label>
-                                    </a>
 
-
+                                    <a href="#" class="list-group-item" >
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input">
+                                            @foreach ($tareas as $fila)
+                                                {{$fila->nombre}}
+                                            @endforeach
+                                        </label>
+                                    </a>
 
                                 </div>
                             </div>
@@ -96,11 +75,12 @@
                                 <label class="col-xs-3 control-label">Empleado</label>
                                 <div class="col-xs-5 selectContainer">
                                     <select class="form-control" name="size">
-                                        <option value="">Choose a size</option>
-                                        <option value="s">Small (S)</option>
-                                        <option value="m">Medium (M)</option>
-                                        <option value="l">Large (L)</option>
-                                        <option value="xl">Extra large (XL)</option>
+                                        <option value="">
+                                            @foreach ($empleados as $fila)
+                                                {{$fila->nombre}}
+                                            @endforeach
+                                        </option>
+
                                     </select>
                                 </div>
                             </div>
@@ -108,16 +88,18 @@
                                 <label class="col-xs-3 control-label">Dia</label>
                                 <div class="col-xs-5 selectContainer">
                                     <select class="form-control" name="size">
-                                        <option value="">Choose a size</option>
-                                        <option value="s">Small (S)</option>
-                                        <option value="m">Medium (M)</option>
-                                        <option value="l">Large (L)</option>
-                                        <option value="xl">Extra large (XL)</option>
+                                        <option value="">Lunes</option>
+                                        <option value="s">Martes</option>
+                                        <option value="m">Miercoles</option>
+                                        <option value="l">Jueves</option>
+                                        <option value="xl">Viernes</option>
+                                        <option value="xl">Sabado</option>
+                                        <option value="xl">Domingo</option>
                                     </select>
                                 </div>
                             </div>
                             <div class=" col-sm-2">
-                                <button type="submit" class="btn btn-danger"><h2 style="color:white";>Agregar</h2></button>
+                                <button type="submit" class="btn btn-danger"><h5 style="color:white";>Agregar</h5></button>
                             </div>
                     </div>
                         </form>

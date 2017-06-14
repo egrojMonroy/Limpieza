@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::get('habitaciones','HabitacionesController@index');
 Route::get('prueba','AsignacionController@index');
 Route::get('ruta_limpieza','Ruta_limpiezaController@index');
-Route::get('calendario','CalendarioController@index');
+Route::get('calendario','Calendario2Controller@index');
 
 ///Jorge
 Route::get('habitaciones/form_limpieza/{id_hab}','HabitacionesController@limpieza');
