@@ -14,6 +14,7 @@ class Ruta_limpiezaController extends Controller
 {
     public function index()
     {
+
         return view('ruta_limpieza')->with(['habitacion'=>1]);
     }
     public function save(Request $request){
