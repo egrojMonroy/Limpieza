@@ -1,5 +1,5 @@
 <!-- 1 al 6 son los pisos, 0 es personalizar, 7 es check outs, 8 son las habitaciones check in-->
-
+<body background="/images/portada.jpg">
 <form action="/creacion/store" method="get">
 <div class="form-group">
 

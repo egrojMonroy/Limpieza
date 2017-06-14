@@ -27,6 +27,7 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="js/ie10-viewport-bug-workaround.js"></script>
 <script src="js/main.js"></script>
+<body background="/images/portada.jpg">
 <form action="/calendario/cronograma" method="get">
 <div class="form-group">
     <label class="col-xs-3 control-label">Seleccione empleado</label>
@@ -44,3 +45,4 @@
     <a href="super" class="btn btn-primary" >Volver </a>
 </div>
 </form>
+</body>

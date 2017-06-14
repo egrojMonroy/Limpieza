@@ -41,7 +41,7 @@
         }
     </style>
 </head>
-<body>
+<body background="/images/portada.jpg">
 
 <div class="container-fluid">
     <div class="row content">

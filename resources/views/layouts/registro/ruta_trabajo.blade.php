@@ -1,3 +1,4 @@
+<body background="/images/portada.jpg">
 <form action="/ruta_limpieza/save" method="get">
     {{ csrf_field() }}
     {{$id_emp}}

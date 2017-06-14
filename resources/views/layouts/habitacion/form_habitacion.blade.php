@@ -1,4 +1,4 @@
-
+<body background="/images/portada.jpg">
 Habitacion N°:  {{$habitacion}}
 
 <h1> SOLICITAR : </h1>

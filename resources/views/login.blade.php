@@ -1,38 +1,119 @@
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Login/Logout animation concept</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<form action="/login" method="get">
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h3 class="panel-title">Registro</h3>
+    <link rel="stylesheet" href="css3/style.css">
+
+
+</head>
+
+<body >
+<div class="cont">
+    <div class="demo">
+        <div class="login">
+            <div class="login__check"></div>
+            <form action="/login" method="get">
+                <div class="login__form">
+                    <div class="login__row">
+                        <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
+                            <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
+                        </svg>
+                        <input name="nombre" type="text" class="login__input name"  placeholder="Username" aria-describedby="basic-addon1" required>
+
+                    </div>
+                    <div class="login__row">
+                        <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
+                            <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
+                        </svg>
+                        <input name="password" type="password"  class="login__input pass" placeholder="Password" aria-describedby="basic-addon1" required>
+
+                    </div>
+                  s
+                    <button type="submit" class="login__submit">Sign in</button>
+                    <p class="login__signup">Don't have an account? &nbsp;<a>Sign up</a></p>
+                </div>
+        </div>
     </div>
-    <div class="panel-body">
 
-        @if(isset($msj))
-            <div class="alert alert-danger" role="alert">
-                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                <span class="sr-only">Error:</span>
-                {{$msj}}
+    <div class="app">
+        <div class="app__top">
+            <div class="app__menu-btn">
+                <span></span>
             </div>
-        @endif
-
-        <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1">@</span>
-            <input name="nombre" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" required>
+            <svg class="app__icon search svg-icon" viewBox="0 0 20 20">
+                <!-- yeap, its purely hardcoded numbers straight from the head :D (same for svg above) -->
+                <path d="M20,20 15.36,15.36 a9,9 0 0,1 -12.72,-12.72 a 9,9 0 0,1 12.72,12.72" />
+            </svg>
+            <p class="app__hello">Good Morning!</p>
+            <div class="app__user">
+                <img src="images/portada.jpg" alt=""  />
+                <span class="app__user-notif">3</span>
+            </div>
+            <div class="app__month">
+                <span class="app__month-btn left"></span>
+                <p class="app__month-name">March</p>
+                <span class="app__month-btn right"></span>
+            </div>
         </div>
-
-
-        <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1">@</span>
-            <input name="password" type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1" required>
+        <div class="app__bot">
+            <div class="app__days">
+                <div class="app__day weekday">Sun</div>
+                <div class="app__day weekday">Mon</div>
+                <div class="app__day weekday">Tue</div>
+                <div class="app__day weekday">Wed</div>
+                <div class="app__day weekday">Thu</div>
+                <div class="app__day weekday">Fri</div>
+                <div class="app__day weekday">Sad</div>
+                <div class="app__day date">8</div>
+                <div class="app__day date">9</div>
+                <div class="app__day date">10</div>
+                <div class="app__day date">11</div>
+                <div class="app__day date">12</div>
+                <div class="app__day date">13</div>
+                <div class="app__day date">14</div>
+            </div>
+            <div class="app__meetings">
+                <div class="app__meeting">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-80_5.jpg" alt="" class="app__meeting-photo" />
+                    <p class="app__meeting-name">Feed the cat</p>
+                    <p class="app__meeting-info">
+                        <span class="app__meeting-time">8 - 10am</span>
+                        <span class="app__meeting-place">Real-life</span>
+                    </p>
+                </div>
+                <div class="app__meeting">
+                    <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg" alt="" class="app__meeting-photo" />
+                    <p class="app__meeting-name">Feed the cat!</p>
+                    <p class="app__meeting-info">
+                        <span class="app__meeting-time">1 - 3pm</span>
+                        <span class="app__meeting-place">Real-life</span>
+                    </p>
+                </div>
+                <div class="app__meeting">
+                    <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg" alt="" class="app__meeting-photo" />
+                    <p class="app__meeting-name">FEED THIS CAT ALREADY!!!</p>
+                    <p class="app__meeting-info">
+                        <span class="app__meeting-time">This button is just for demo ></span>
+                    </p>
+                </div>
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary" >Enviar </button>
-
+        <div class="app__logout">
+            <svg class="app__logout-icon svg-icon" viewBox="0 0 20 20">
+                <path d="M6,3 a8,8 0 1,0 8,0 M10,0 10,12"/>
+            </svg>
+        </div>
     </div>
 </div>
-</form>
+</div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+<script src="js3/index.js"></script>
+
+</body>
+</html>

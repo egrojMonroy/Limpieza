@@ -1,4 +1,4 @@
-
+<body background="/images/portada.jpg">
 <br>
 Habitacion N°: {{$id_hab}}
 <br><br><br><br>

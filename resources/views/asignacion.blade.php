@@ -16,7 +16,7 @@
         }
     </style>
 </head>
-<body>
+<body background="/images/portada.jpg">
 
 <br><Br><br><Br>
 <form action="/eventualidades/guardar" method="get">

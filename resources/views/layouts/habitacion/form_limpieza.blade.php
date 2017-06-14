@@ -1,6 +1,7 @@
 
 <br>
 Habitacion N°: {{$id_hab}}
+<body background="/images/portada.jpg">
 <br><br><br><br>
 <form action="/habitaciones/store_limp/" method="get">
     {{ csrf_field() }}

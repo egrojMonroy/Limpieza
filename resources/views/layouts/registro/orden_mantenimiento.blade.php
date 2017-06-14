@@ -3,7 +3,7 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet"/>
-
+<body background="/images/portada.jpg">
 <form action="/ruta_limpieza" method="get">
     <br><Br><br><br>
     <div class="center-align">
