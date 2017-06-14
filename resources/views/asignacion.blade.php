@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>Eventualidades</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -84,6 +84,47 @@
                 <div class="col-sm-12">
                     <div class="well">
                         <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                        <input type="radio" name="tarea" value="1">
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <div class="well">
+                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                        <input type="radio" name="tarea" value="1">
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <div class="well">
+                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                        <input type="radio" name="tarea" value="1">
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <div class="well">
+                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                        <input type="radio" name="tarea" value="1">
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <div class="well">
+                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                        <input type="radio" name="tarea" value="1">
                     </div>
                 </div>
             </div>
@@ -92,38 +133,7 @@
                 <div class="col-sm-12">
                     <div class="well">
                         <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-sm-12">
-                    <div class="well">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-sm-12">
-                    <div class="well">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-sm-12">
-                    <div class="well">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-sm-12">
-                    <div class="well">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                        <input type="radio" name="tarea" value="1">
                     </div>
                 </div>
             </div>
@@ -132,9 +142,15 @@
     </div>
 </div>
 
-<footer class="container-fluid text-center">
-    <p>Footer Text</p>
-</footer>
-
 </body>
 </html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+    $(function() {
+
+        $('input[type="radio"]').on('change', function () {
+            $(this).siblings('input[type="radio"]').attr('checked', false);
+        });
+    });
+</script>

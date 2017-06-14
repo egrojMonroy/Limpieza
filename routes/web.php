@@ -17,9 +17,11 @@ Route::get('ruta_limpieza','Ruta_limpiezaController@index');
 Route::get('calendario','Calendario2Controller@index');
 Route::get('calendario/cronograma','Calendario2Controller@cronograma');
 Route::get('calendario2','Calendario2Controller@store');
+Route::get('calendario/borrar','Calendario2Controller@borrar');
 Route::get('empleado/{id}','EmpleadoController@index');
 Route::get('calendar','CalendarController@index');
 Route::get('eventualidades','EventualidadesController@index');
+
 
 ///Oliver
 Route::get('solicitud','SolicitudController@index');
