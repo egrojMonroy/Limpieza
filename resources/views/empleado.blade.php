@@ -95,7 +95,13 @@
                                             @endforeach
                                         </h2>
                                     </button>   <div>
-                                        <h1><span class="label label-default">New</span></h1>
+                                        <h1><span class="label label-default">
+                                                    @foreach($estados as $fila)
+                                                        {{$fila->estado}}
+                                                    @endforeach
+
+
+                                            </span></h1>
                                     </div>
                                 </div>
                             </div>
