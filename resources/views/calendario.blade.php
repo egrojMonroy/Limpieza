@@ -105,7 +105,7 @@
                         <div class="wrap">
                             <ul class="lista" id="lista" title="LUNES">
                                 <li>
-                                    <a href="#" class="list-group-item active">
+
                                     <a href="#" class="list-group-item active">
                                         <h1  ALIGN=center style="color:white";>Lunes</h1>
                                     </a>
@@ -216,9 +216,11 @@
                 </a>
 
             </div>
+        </main>
             //
 
-
+    </div>
+</div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

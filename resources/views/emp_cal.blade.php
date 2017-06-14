@@ -35,7 +35,7 @@
             @foreach ($empleados as $fila)
                 <option value="{{$fila->id}}" id="">
                     {{$fila->nombre}}
-                    @endforeach
+
                 </option>
             @endforeach
         </select>
