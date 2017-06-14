@@ -53,7 +53,7 @@
             <ul class="nav nav-pills flex-column">
                 <div  href="#" class="list-group-item active">
                     <div class="wrap">
-                        <form class="formulario" action="">
+                        <form action="calendario2" method="get">
                             <div class="form-group">
                                 <div class="list-group">
                                     <a href="#" class="list-group-item active">
@@ -62,8 +62,8 @@
 
                                     <a href="#" class="list-group-item" >
                                         <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input">
                                             @foreach ($tareas as $fila)
+                                                <input type="checkbox" class="labores"  id="{{$fila->id}}" name="tareas[]" value="{{$fila->id}}">
                                                 {{$fila->nombre}}
                                             @endforeach
                                         </label>
@@ -74,9 +74,9 @@
                             <div class="form-group">
                                 <label class="col-xs-3 control-label">Empleado</label>
                                 <div class="col-xs-5 selectContainer">
-                                    <select class="form-control" name="size">
-                                        <option value="">
+                                    <select class="form-control" name="empleados">
                                             @foreach ($empleados as $fila)
+                                            <option value="{{$fila->id}}" id="">
                                                 {{$fila->nombre}}
                                             @endforeach
                                         </option>
@@ -88,20 +88,19 @@
                                 <label class="col-xs-3 control-label">Dia</label>
                                 <div class="col-xs-5 selectContainer">
                                     <select class="form-control" name="size">
-                                        <option value="">Lunes</option>
-                                        <option value="s">Martes</option>
-                                        <option value="m">Miercoles</option>
-                                        <option value="l">Jueves</option>
-                                        <option value="xl">Viernes</option>
-                                        <option value="xl">Sabado</option>
-                                        <option value="xl">Domingo</option>
+                                        <option value="lunes">Lunes</option>
+                                        <option value="martes">Martes</option>
+                                        <option value="miercoles">Miercoles</option>
+                                        <option value="jueves">Jueves</option>
+                                        <option value="viernes">Viernes</option>
+                                        <option value="sabado">Sabado</option>
+                                        <option value="domingo">Domingo</option>
                                     </select>
                                 </div>
                             </div>
                             <div class=" col-sm-2">
                                 <button type="submit" class="btn btn-danger"><h5 style="color:white";>Agregar</h5></button>
                             </div>
-                    </div>
                         </form>
                     </div>
                 </div>
@@ -116,6 +115,7 @@
                         <div class="wrap">
                             <ul class="lista" id="lista" title="LUNES">
                                 <li>
+                                    <a href="#" class="list-group-item active">
                                     <a href="#" class="list-group-item active">
                                         <h1  ALIGN=center style="color:white";>Lunes</h1>
                                     </a>
