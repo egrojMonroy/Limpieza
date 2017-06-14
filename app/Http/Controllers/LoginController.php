@@ -32,7 +32,9 @@ class LoginController extends Controller
                 if($role==2){
                     //retornar la vista del CESAR
 
-                    return redirect()->action('');
+
+                    return redirect()->action('EmpleadoController@index',['nick'=>$user[0]->nick]);
+
                 }else if($role==3){
                     //retornar vista de habitaciones
                     //ya esta

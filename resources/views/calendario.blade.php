@@ -99,8 +99,8 @@
 
         <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-">
             <div class="tareas"><li><h1 ALIGN=center>CRONOGRAMA</h1></li></div>
-            <div class="form-inline">
-                <a>
+                <div class="form-inline">
+                    <a>
                     <div class="tareas">
                         <div class="wrap">
                             <ul class="lista" id="lista" title="LUNES">
