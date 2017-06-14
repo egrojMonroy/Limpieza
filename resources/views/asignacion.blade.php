@@ -126,7 +126,7 @@
                         <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
                     </div>
                 </div>
-            </div>  
+            </div>
         </div>
 
     </div>

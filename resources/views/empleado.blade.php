@@ -55,35 +55,61 @@
             </div>
         </div>
 
-        <div class="col-sm-9">
-            <h4><small>TAREAS</small></h4>
-            <hr>
-            <h2>  @foreach($tareas as $tarea)
-                    {{$tarea}}
-                @endforeach
-            </h2>
 
 
-            <h4>Leave a Comment:</h4>
-            <form role="form">
-                <div class="form-group">
-                    <textarea class="form-control" rows="3" required>
-                         @foreach ($estados as $fila)
+                <div class="col-sm-7">
 
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default text-left">
+                                <div class="panel-body">
+                                    <p contenteditable="true">TAREAS</p>
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                                {{$fila->estado}}
+                    <div class="row">
+                        <div class="col-sm-12">
 
+                            <div class="panel panel-default form-inline">
 
-                        @endforeach
-                    </textarea>
+                                <div class="panel-body">
+                                    <button  type="button" class="btn btn-primary btn-md col-sm-10">
+                                        <h2>  @foreach($tareas as $tarea)
+                                                {{$tarea}}
+                                            @endforeach
+                                        </h2>
+                                    </button>   <div>
+                                        <h1><span class="label label-default">New</span></h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default form-inline">
+
+                                <div class="panel-body">
+                                    <button  type="button" class="btn btn-primary btn-md col-sm-10">
+                                        <h2>  @foreach($tareas as $tarea)
+                                                {{$tarea}}
+                                            @endforeach
+                                        </h2>
+                                    </button>   <div>
+                                        <h1><span class="label label-default">New</span></h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
-                <button type="submit" class="btn btn-success">Submit</button>
-            </form>
-            <br><br>
 
-
+            </div>
         </div>
+
+        <
     </div>
 </div>
 
