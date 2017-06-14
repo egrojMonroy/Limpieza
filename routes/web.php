@@ -15,12 +15,18 @@ Route::get('habitaciones/{id}','HabitacionesController@index');
 Route::get('prueba','AsignacionController@index');
 Route::get('ruta_limpieza','Ruta_limpiezaController@index');
 Route::get('calendario','Calendario2Controller@index');
+Route::get('calendario/cronograma','Calendario2Controller@cronograma');
 Route::get('calendario2','Calendario2Controller@store');
 
 
 ///Oliver
 Route::get('solicitud','SolicitudController@index');
 ///end Oliver
+
+///Diego
+
+
+/// End Diego
 
 
 ///Jorge
@@ -34,4 +40,7 @@ Route::get('creacion','CreacionController@index');
 Route::get('creacion/store','CreacionController@store');
 Route::get('/','LoginController@index');
 Route::get('/login','LoginController@store');
+
 ///end Jorge
+///
+//
