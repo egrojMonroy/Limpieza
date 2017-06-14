@@ -49,7 +49,7 @@
         </div>
     </div>
 </nav>
-<form action="" method="get">
+<form action="/eventualidades/guardar" method="get">
 <div class="container text-center">
     <div class="row">
         <div class="col-sm-3 well">
@@ -65,7 +65,7 @@
                 @endforeach
             </select>
             <div class="panel-footer">
-                <input type="submit"  class="btn btn-primary btn-md">Asignar</a>
+                <input type="submit"  class="btn btn-primary btn-md" value="Asignar">
             </div>
         </div>
         <div class="col-sm-7">
@@ -106,7 +106,7 @@
                                 @endfor
                             </div>
                     <br><BR><br><br><br>
-                        <input type="radio" name="tarea" value="1">
+                        <input type="radio" name="tarea" value="{{$eventualidad->id}}">
                     </div>
                 </div>
             </div>

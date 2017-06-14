@@ -15,15 +15,22 @@ class EventualidadesController extends Controller
     {
 
         $empleados = Empleado::all();
-        $eventualidad = Sol_limp::all();
+        $eventualidad = Sol_limp::whereNull('empleado_id')->get();
+
         foreach ($eventualidad as $item){
             $aux = DB::table('objetos')->select('identificador')->where('id',$item->objeto_id)->get();
             $item->objeto = $aux[0]->identificador;
         }
 
-        //dd($eventualidad);
+
         return view('asignacion')->with(['empleados'=>$empleados,'eventualidades'=>$eventualidad]);
     }
-
+    public function guardar(Request $request){
+        
+        $tarea = Sol_limp::find($request->tarea);
+        $tarea->empleado_id = $request->empleado;
+        $tarea->save();
+        return $this->index();
+    }
 
 }
