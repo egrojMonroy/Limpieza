@@ -10,7 +10,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    @if(isset($empleados))
+                    @if(isset($habitaciones))
                     @include('layouts.solicitud.solicitud')
                     @endif
                 </div>

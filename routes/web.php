@@ -25,6 +25,7 @@ Route::get('eventualidades/guardar','EventualidadesController@guardar');
 
 ///Oliver
 Route::get('solicitud','SolicitudController@index');
+Route::get('amadellave','AmadellaveController@index');
 ///end Oliver
 
 ///Diego
