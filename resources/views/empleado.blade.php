@@ -45,13 +45,8 @@
                 <li><a href="#section2">EVENTUALIDADES</a></li>
 
             </ul><br>
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search Blog..">
-                <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
+            <div class="panel panel-default">
+                <a href="/" class="btn btn-default" > Salir</a>
             </div>
         </div>
 
@@ -69,47 +64,28 @@
                             </div>
                         </div>
                     </div>
-
+<form action="/ruta_limpieza" method="get">
+    <input type="hidden" name="id_emp" value="{{$id_emp}}">
                     <div class="row">
                         <div class="col-sm-12">
 
+                            @foreach($tareas as $tarea)
+
                             <div class="panel panel-default form-inline">
 
                                 <div class="panel-body">
-                                    <button  type="button" class="btn btn-primary btn-md col-sm-10">
-                                        <h2>  @foreach($tareas as $tarea)
-                                                {{$tarea}}
-                                            @endforeach
-                                        </h2>
-                                    </button>   <div>
-                                        <h1><span class="label label-default">New</span></h1>
-                                    </div>
+
+                                    <input  type="submit" class="btn btn-primary btn-md col-sm-10" value="{{$tarea[0]}}" name="id_hab">
+
+                                        <h1><span class="label label-default">{{$tarea[1]}}</span></h1>
+
                                 </div>
                             </div>
-                            <div class="panel panel-default form-inline">
-
-                                <div class="panel-body">
-                                    <button  type="button" class="btn btn-primary btn-md col-sm-10">
-                                        <h2>  @foreach($tareas as $tarea)
-                                                {{$tarea}}
-                                            @endforeach
-                                        </h2>
-                                    </button>   <div>
-                                        <h1><span class="label label-default">
-                                                    @foreach($estados as $fila)
-                                                        {{$fila->estado}}
-                                                    @endforeach
-
-
-                                            </span></h1>
-                                    </div>
-                                </div>
-                            </div>
-
+                            @endforeach
                         </div>
 
                     </div>
-
+</form>
                 </div>
 
             </div>

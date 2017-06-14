@@ -1,5 +1,9 @@
 <form action="/ruta_limpieza/save" method="get">
     {{ csrf_field() }}
+    {{$id_emp}}
+    <input type="hidden" name="id_emp" value="{{$id_emp}}">
+    <input type="hidden" name="id_dep" value="{{$habitacion}}">
+
 <div>
     <table>
         <td>

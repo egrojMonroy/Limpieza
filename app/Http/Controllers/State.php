@@ -14,7 +14,9 @@ use App\Dependencia;
 class State
 {
     public function setState($id,$state){
+
         Dependencia::where('id',$id)->update(['estado'=>$state]);
+
     }
     public function getState($id){
         $dep = Dependencia::where('id',$id)->get();

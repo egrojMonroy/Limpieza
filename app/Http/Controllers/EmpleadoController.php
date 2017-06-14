@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Dependencia;
+use App\Hab_has_tarea;
 use App\Tarea;
 use App\Empleado;
 use App\Tarea_has_empleado;
@@ -19,12 +20,28 @@ class EmpleadoController extends Controller
         $day = $this->traducir(Carbon::now()->format('l'));
 
         $tareas = $this->query($id_emp,$day);
+        $nuevo=collect();
+        foreach ($tareas as $tarea){
 
-        $estados = Dependencia::all();
-      
+            $aux=Tarea::query()->where('nombre',$tarea)->get();
+            $id_tarea= $aux[0]->id;
 
 
-        return view('empleado')->with(["id_emp"=>$id_emp,"tareas"=>$tareas,"estados"=>$estados]);;
+            $habitaciones = Hab_has_tarea::query()->where('id_tarea',$id_tarea)->get();
+
+
+
+            foreach ($habitaciones as $habitacion){
+                $id_hab=$habitacion->id_dep;
+                $hab = Dependencia::find($id_hab);
+                $estado =$hab->estado;
+                $nuevo->push([$hab->identificador,$estado]);
+            }
+
+        }
+
+
+        return view('empleado')->with(["id_emp"=>$id_emp,"tareas"=>$nuevo]);
     }
     public function traducir($string){
         if($string == "Monday")
@@ -47,6 +64,7 @@ class EmpleadoController extends Controller
         //dd("ASDASDFASD");
 
         $ans = DB::table('tarea_has_empleados')->distinct()->select('id_tarea','id_emp','dia')->where('id_emp',$id_emp)->where('dia',$dia)->get();
+
         $i=0;
         $sol=null;
         foreach ($ans as $row){
@@ -55,6 +73,10 @@ class EmpleadoController extends Controller
             $i++;
         }
 
+
         return $sol;
     }
+
+
+
 }

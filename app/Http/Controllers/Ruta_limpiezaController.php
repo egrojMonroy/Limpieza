@@ -12,15 +12,17 @@ use Illuminate\Http\Request;
 
 class Ruta_limpiezaController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
 
-        return view('ruta_limpieza')->with(['habitacion'=>1]);
+        $id= filter_var($request->id_hab, FILTER_SANITIZE_NUMBER_INT);
+        return view('ruta_limpieza')->with(['habitacion'=>$id,'id_emp'=>$request->id_emp]);
     }
     public function save(Request $request){
+
         $nuevo = new Ruta_limpieza();
-        $nuevo->id_emp = '5';
-        $nuevo->id_dep= '5';
+        $nuevo->id_emp = $request->id_emp;
+        $nuevo->id_dep= $request->id_dep;
         $nuevo->jabon=$request->reposiciones[0];
         $nuevo->toallas=$request->reposiciones[1];
         $nuevo->sabanas=$request->reposiciones[2];
@@ -37,8 +39,10 @@ class Ruta_limpiezaController extends Controller
         $nuevo->observaciones=$request->observaciones;
         if($nuevo->save()){
             $state = new HechoState();
-            $state->doAction(1);
-            return view('ruta_limpieza');
+
+            $state->doAction($request->id_dep);
+
+            return redirect()->action('EmpleadoController@index',['id'=>$request->id_emp]);
         }
         else
             dd($request);
