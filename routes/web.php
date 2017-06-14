@@ -21,7 +21,7 @@ Route::get('calendario/borrar','Calendario2Controller@borrar');
 Route::get('empleado/{id}','EmpleadoController@index');
 Route::get('calendar','CalendarController@index');
 Route::get('eventualidades','EventualidadesController@index');
-
+Route::get('eventualidades/guardar','EventualidadesController@guardar');
 
 ///Oliver
 Route::get('solicitud','SolicitudController@index');
