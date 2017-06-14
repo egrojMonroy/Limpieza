@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Tareas_has_empleados extends Authenticatable
+class Tarea_has_empleado extends Authenticatable
 {
 
 

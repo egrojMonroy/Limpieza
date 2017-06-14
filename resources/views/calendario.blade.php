@@ -61,12 +61,14 @@
                                     </a>
 
                                     <a href="#" class="list-group-item" >
+                                        @foreach ($tareas as $fila)
                                         <label class="form-check-label">
-                                            @foreach ($tareas as $fila)
+
                                                 <input type="checkbox" class="labores"  id="{{$fila->id}}" name="tareas[]" value="{{$fila->id}}">
                                                 {{$fila->nombre}}
-                                            @endforeach
+
                                         </label>
+                                        @endforeach
                                     </a>
 
                                 </div>
