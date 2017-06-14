@@ -16,7 +16,7 @@ Route::get('prueba','AsignacionController@index');
 Route::get('ruta_limpieza','Ruta_limpiezaController@index');
 Route::get('calendario','Calendario2Controller@index');
 Route::get('calendario2','Calendario2Controller@store');
-
+Route::get('empleado','EmpleadoController@index');
 
 ///Oliver
 Route::get('solicitud','SolicitudController@index');
