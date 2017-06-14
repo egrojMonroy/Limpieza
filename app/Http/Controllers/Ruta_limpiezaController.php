@@ -35,8 +35,11 @@ class Ruta_limpiezaController extends Controller
         $nuevo->otro_limp_name=$request->otro_limp;
         $nuevo->otro_serv_name=$request->otro_serv;
         $nuevo->observaciones=$request->observaciones;
-        if($nuevo->save())
-        return view('ruta_limpieza');
+        if($nuevo->save()){
+            $state = new HechoState();
+            $state->doAction(1);
+            return view('ruta_limpieza');
+        }
         else
             dd($request);
         return view('ruta_limpieza');

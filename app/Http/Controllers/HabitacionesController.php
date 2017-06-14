@@ -11,10 +11,10 @@ use Illuminate\Http\Request;
 
 class HabitacionesController extends Controller
 {
-    public function index()
+    public function index($nick)
     {
-
-        return view('habitaciones')->with(['habitacion'=>1]);
+        $id_hab = filter_var($nick, FILTER_SANITIZE_NUMBER_INT);
+        return view('habitaciones')->with(['habitacion'=>$id_hab]);
     }
     public function limpieza($id_hab)
     {
@@ -22,7 +22,7 @@ class HabitacionesController extends Controller
             ->join('objetos','objetos.id','=','objeto_id')
             ->where('dependencia_id','=',1)
             ->get();
-        return view('habitaciones')->with(['limpieza'=>true,'habitacion'=>1,'objetos'=>$objetos,'id_hab'=>$id_hab]);
+        return view('habitaciones')->with(['limpieza'=>true,'objetos'=>$objetos,'id_hab'=>$id_hab]);
     }
     public function mantenimiento($id_hab){
         $objetos = Dependencia_has_objeto::query()

@@ -27,9 +27,22 @@ class LoginController extends Controller
             }else{
                 //contraseña correcta
                 //mandar en funciona a los roles, y ademas mandar el id.
-                //role 2 es empleados| 1 ama de llaves |0 supervisor
-                if($user[0]->role==2){
+                //role 2 es empleados| 1 ama de llaves |0 supervisor | 3 habitacion
+                $role = $user[0]->role;
+                if($role==2){
+                    //retornar la vista del CESAR
 
+                    return redirect()->action('');
+                }else if($role==3){
+                    //retornar vista de habitaciones
+                    //ya esta
+                    return redirect()->action('HabitacionesController@index',['nick'=>$user[0]->nick]);
+                }else if($role==1){
+                    //retornar vista de ama de llaves (CUAL ES?)
+                }else{
+                    //retornar vista de supervisor
+                    //Menu de cronograma etc etc
+                    return view('creacion');
                 }
             }
         }

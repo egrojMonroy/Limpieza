@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class CreacionController extends Controller
 {
-    public function index(){
+    public function index($nick){
 
         $habitaciones = Dependencia::all();
         $ubicaciones =Ubicacion::all();

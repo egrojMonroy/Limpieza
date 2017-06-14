@@ -1,4 +1,6 @@
 
+<br>
+Habitacion N°: {{$id_hab}}
 <br><br><br><br>
 <form action="/habitaciones/store_mant/" method="get">
     {{ csrf_field() }}
