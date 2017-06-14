@@ -16,6 +16,12 @@ Route::get('prueba','AsignacionController@index');
 Route::get('ruta_limpieza','Ruta_limpiezaController@index');
 Route::get('calendario','Calendario2Controller@index');
 
+
+///Oliver
+Route::get('solicitud','SolicitudController@index');
+///end Oliver
+
+
 ///Jorge
 Route::get('habitaciones/form_limpieza/{id_hab}','HabitacionesController@limpieza');
 Route::get('habitaciones/form_mantenimiento/{id_hab}','HabitacionesController@mantenimiento');
