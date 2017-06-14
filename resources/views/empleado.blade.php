@@ -281,7 +281,16 @@
                                     <div class="tab-pane animated fadeInRight active" id="about">
                                         <div class="user-profile-content">
                                             <h5><strong>ABOUT</strong> ME</h5>
-                                            <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+                                            <p>
+                                                @foreach ($emp as $fila)
+                                                    <label class="form-check-label">
+
+                                                        <input type="checkbox" class="labores"  id="{{$fila->id}}" name="tareas[]" value="{{$fila->id}}">
+                                                        {{$fila->id_emp}}
+
+                                                    </label>
+                                                @endforeach
+                                            </p>
                                             <hr>
                                             <div class="row">
                                                 <div class="col-sm-6">
@@ -335,14 +344,7 @@
                                                 <div class="form-group">
                                                     <label for="AboutMe">About Me</label>
                                                     <textarea class="form-control" id="AboutMe" style="height: 125px;">
-                                                        @foreach ($emp as $fila)
-                                                            <label class="form-check-label">
 
-                                                                  <input type="checkbox" class="labores"  id="{{$fila->id}}" name="tareas[]" value="{{$fila->id}}">
-                                                                {{$fila->id_emp}}
-
-                                                            </label>
-                                                        @endforeach
                                                     </textarea>
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Save</button>
