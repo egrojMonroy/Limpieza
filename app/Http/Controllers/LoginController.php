@@ -29,7 +29,7 @@ class LoginController extends Controller
                 //mandar en funciona a los roles, y ademas mandar el id.
                 //role 2 es empleados| 1 ama de llaves |0 supervisor
                 if($user[0]->role==2){
-                        
+
                 }
             }
         }
