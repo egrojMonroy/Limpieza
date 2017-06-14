@@ -11,7 +11,7 @@
         /* Set black background color, white text and some padding */
         footer {
             background-color: #555;
-            color: white;
+            color: darkgrey;
             padding: 15px;
         }
     </style>
@@ -49,22 +49,24 @@
         </div>
     </div>
 </nav>
-
+<form action="" method="get">
 <div class="container text-center">
     <div class="row">
         <div class="col-sm-3 well">
             <div class="well">
-                <p><a href="#">Empleados</a></p>
-
+                <p><h3>Empleados</h3></p>
             </div>
+            <select class="form-control" name="empleado">
+                @foreach ($empleados as $fila)
+                    <option value="{{$fila->id}}" id="">
+                        {{$fila->nombre}}
 
-            <div class="alert alert-success fade in">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-                <p><a href="#">Link</a></p>
-                <p><a href="#">Link</a></p>
-                <p><a href="#">Link</a></p>
+                    </option>
+                @endforeach
+            </select>
+            <div class="panel-footer">
+                <input type="submit"  class="btn btn-primary btn-md">Asignar</a>
             </div>
-
         </div>
         <div class="col-sm-7">
 
@@ -72,85 +74,49 @@
                 <div class="col-sm-12">
                     <div class="panel panel-default text-left">
                         <div class="panel-body">
-                            <p contenteditable="true">EVENTUALIDADES</p>
+                            <p>EVENTUALIDADES</p>
 
                         </div>
                     </div>
                 </div>
             </div>
-
+            @foreach($eventualidades as $eventualidad)
             <div class="row">
-
                 <div class="col-sm-12">
                     <div class="well">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-                        <input type="radio" name="tarea" value="1">
-                    </div>
 
-                </div>
-            </div>
-            <div class="row">
+                            <div class="col-md-6">
+                        <b>Fecha: </b>
+                        {{$eventualidad->dato_temp}}
+                        <br>
+                        <b>Habitacion :</b>
+                        {{$eventualidad->dependencia_id}}
+                        <br>
+                        <b>Objeto :</b>
+                        {{$eventualidad->objeto}}
+                            </div>
 
-                <div class="col-sm-12">
-                    <div class="well">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-                        <input type="radio" name="tarea" value="1">
-                    </div>
 
-                </div>
-            </div>
-            <div class="row">
+                            <div class="col-md-6">
+                                <b>Descripcion :</b>
 
-                <div class="col-sm-12">
-                    <div class="well">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-                        <input type="radio" name="tarea" value="1">
-                    </div>
+                                @for($i=0;$i<strlen($eventualidad->descripcion);$i++ )
+                                    {{$eventualidad->descripcion{$i} }}
 
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-sm-12">
-                    <div class="well">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-                        <input type="radio" name="tarea" value="1">
-                    </div>
-
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-sm-12">
-                    <div class="well">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                                @endfor
+                            </div>
+                    <br><BR><br><br><br>
                         <input type="radio" name="tarea" value="1">
                     </div>
                 </div>
             </div>
-            <div class="row">
+            @endforeach
 
-                <div class="col-sm-12">
-                    <div class="well">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-                        <input type="radio" name="tarea" value="1">
-                    </div>
-                </div>
-            </div>  
+
         </div>
 
     </div>
 </div>
-
+</form>
 </body>
 </html>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<script>
-    $(function() {
-
-        $('input[type="radio"]').on('change', function () {
-            $(this).siblings('input[type="radio"]').attr('checked', false);
-        });
-    });
-</script>
