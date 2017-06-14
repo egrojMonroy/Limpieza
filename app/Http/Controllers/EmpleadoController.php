@@ -13,7 +13,7 @@ class EmpleadoController extends Controller
     public function index()
     {
         $emp=Tarea_has_empleado::all();
-        return view('empleado')->with(["tareas"=>$emp]);;
+        return view('empleado')->with(["emp"=>$emp]);;
     }
 
 
