@@ -19,6 +19,7 @@ Route::get('calendario/cronograma','Calendario2Controller@cronograma');
 Route::get('calendario2','Calendario2Controller@store');
 Route::get('empleado/{id}','EmpleadoController@index');
 Route::get('calendar','CalendarController@index');
+Route::get('eventualidades','EventualidadesController@index');
 
 ///Oliver
 Route::get('solicitud','SolicitudController@index');
