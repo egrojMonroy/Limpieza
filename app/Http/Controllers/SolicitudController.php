@@ -7,6 +7,7 @@ use App\Hab_has_tarea;
 use App\Ubicacion;
 use App\Sol_limp;
 use App\Empleado;
+use App\Tarea;
 use Illuminate\Http\Request;
 
 class SolicitudController extends Controller
@@ -14,6 +15,7 @@ class SolicitudController extends Controller
     public function index()
     {	
     	$empleados = Empleado::all();
-        return view('solicitud')->with(["empleados"=>$empleados]);
+    	$tareas = Tarea::all();
+        return view('solicitud')->with(["empleados"=>$empleados,"tareas"=>$tareas]);
     }
 }
