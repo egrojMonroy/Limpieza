@@ -19,9 +19,9 @@ class EmpleadoController extends Controller
         $day = $this->traducir(Carbon::now()->format('l'));
 
         $tareas = $this->query($id_emp,$day);
-        
+
         $estados = Dependencia::all();
-        dd($estados);
+      
 
 
         return view('empleado')->with(["id_emp"=>$id_emp,"tareas"=>$tareas,"estados"=>$estados]);;
