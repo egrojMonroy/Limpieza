@@ -20,6 +20,7 @@ Route::get('calendario2','Calendario2Controller@store');
 Route::get('calendario/borrar','Calendario2Controller@borrar');
 Route::get('empleado/{id}','EmpleadoController@index');
 Route::get('calendar','CalendarController@index');
+Route::get('eventualidades','EventualidadesController@index');
 
 
 ///Oliver

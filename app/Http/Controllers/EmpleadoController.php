@@ -13,13 +13,17 @@ class EmpleadoController extends Controller
 {
     public function index($nick)
     {
+
         $id_emp = filter_var($nick, FILTER_SANITIZE_NUMBER_INT);
 
         $day = $this->traducir(Carbon::now()->format('l'));
 
         $tareas = $this->query($id_emp,$day);
 
-        return view('empleado')->with(["id_emp"=>$id_emp,"tareas"=>$tareas]);;
+        $estados = Dependencia::all();
+
+
+        return view('empleado')->with(["id_emp"=>$id_emp,"tareas"=>$tareas,"estados"=>$estados]);;
     }
     public function traducir($string){
         if($string == "Monday")
