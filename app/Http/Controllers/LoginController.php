@@ -44,7 +44,7 @@ class LoginController extends Controller
                 }else{
                     //retornar vista de supervisor
                     //Menu de cronograma etc etc
-                    return view('creacion');
+                    return view('super');
                 }
             }
         }

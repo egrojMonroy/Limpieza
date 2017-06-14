@@ -88,7 +88,7 @@
 <div>
     <input type="submit" class="waves-effect waves-light btn" value="Registrar" align="left">
 
-    <a href="/ruta_limpieza" type="button" class="waves-effect waves-light btn" value="Cancelar" align="right">Cancelar</a>
+    <a href="{{ URL::previous() }}" type="button" class="waves-effect waves-light btn" value="Cancelar" align="right">Cancelar</a>
     <a href="/ruta_limpieza/mantenimiento" type="button" class="waves-effect waves-light btn right" value="Mantenimiento" align="right">Mantenmiento</a>
 </div>
 </form>

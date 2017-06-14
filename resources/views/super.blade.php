@@ -11,12 +11,12 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    @if(isset($limpieza))
-                        @include('layouts.habitacion.form_limpieza')
-                    @elseif (isset($mantenimiento))
-                        @include('layouts.habitacion.form_mantenimiento')
+                    @if(isset($creacion))
+                        @include('creacion')
+                    @elseif (isset($cronograma))
+                        @include('calendario')
                     @else
-                        @include('layouts.habitacion.form_habitacion')
+                        @include('form_super')
                     @endif
                 </div>
             </div>

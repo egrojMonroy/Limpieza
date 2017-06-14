@@ -75,10 +75,12 @@
 
                                 <div class="panel-body">
 
-                                    <input  type="submit" class="btn btn-primary btn-md col-sm-10" value="{{$tarea[0]}}" name="id_hab">
-
-                                        <h1><span class="label label-default">{{$tarea[1]}}</span></h1>
-
+                                    <input  type="submit" class="btn btn-primary btn-md col-sm-9" value="{{$tarea[0]}}" name="id_hab">
+                                    @if($tarea[1]==0)
+                                        <h1><span class="label label-default">Por Hacer</span></h1>
+                                    @else
+                                        <h1><span class="label label-default">Hecho</span></h1>
+                                    @endif
                                 </div>
                             </div>
                             @endforeach
@@ -96,7 +98,7 @@
 </div>
 
 <footer class="container-fluid">
-    <p>Footer Text</p>
+
 </footer>
 
 </body>

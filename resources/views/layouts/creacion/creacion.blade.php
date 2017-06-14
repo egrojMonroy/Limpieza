@@ -5,7 +5,7 @@
 
     <div class="input-group">
         <span class="input-group-addon" id="basic-addon1">Nombre de tarea </span>
-        <input type="text" class="form-control" name="nombre" placeholder="Nombre de tarea" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" name="nombre" placeholder="Nombre de tarea" required aria-describedby="basic-addon1">
     </div>
     <label for="sel1">Select list:</label>
     <select class="form-control" id="sel1" name="ubicacion">
@@ -70,6 +70,7 @@
     <input type="hidden" id="hidden1" name="checkout" data-field-id="{{$checkouts}}">
 
 <input type="submit" class="btn btn-primary">
+    <a href="super" class="btn btn-primary" >Volver </a>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script>

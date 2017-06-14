@@ -32,6 +32,7 @@ class HabitacionesController extends Controller
         return view('habitaciones')->with(['mantenimiento'=>true,'habitacion'=>1,'objetos'=>$objetos,'id_hab'=>$id_hab]);
     }
     public function store_limp(Request $request){
+        dd("HOLA");
         //para guardar los datos del formulario de limpieza
         $sol= new Sol_limp();
         $sol->dato_temp= Carbon::now();
@@ -39,9 +40,10 @@ class HabitacionesController extends Controller
         $sol->dependencia_id = $request->id_hab;
         $sol->descripcion = $request->descripcion;
         $sol->save();
-        return view('habitaciones')->with(['habitacion'=>$request->id_hab]);
+        return view('/')->with(['habitacion'=>$request->id_hab]);
     }
     public function store_mant(Request $request){
+        dd("ASDFASDF");
         //para guardar los datos de mantenimiento
         $sol= new Sol_mant();
         $sol->dato_temp= Carbon::now();

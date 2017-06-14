@@ -87,6 +87,7 @@
                     <div class=" col-sm-2">
                         <button type="submit"  name="submit"class="btn btn-danger"><h5 style="color:white";>Agregar</h5></button>
                     </div>
+                    <a href="/super" class="btn btn-primary" >Volver </a>
                 </form>
             </div>
         </div>
