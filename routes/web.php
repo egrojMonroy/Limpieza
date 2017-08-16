@@ -49,3 +49,8 @@ Route::get('/login','LoginController@store');
 ///end Jorge
 ///
 //
+Route::get('super', function(){
+    return View('super'); // Your Blade template name
+});
+
+Route::get('prueba','HabitacionesController@store_limp');

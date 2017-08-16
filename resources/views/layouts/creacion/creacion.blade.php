@@ -1,4 +1,4 @@
-<!-- 1 al 6 son los pisos, 0 es personalizar, 7 es check outs, 8 son las habitaciones check in-->
+f<!-- 1 al 6 son los pisos, 0 es personalizar, 7 es check outs, 8 son las habitaciones check in-->
 <body background="/images/portada.jpg">
 <form action="/creacion/store" method="get">
 <div class="form-group">
@@ -70,7 +70,7 @@
     <input type="hidden" id="hidden1" name="checkout" data-field-id="{{$checkouts}}">
 
 <input type="submit" class="btn btn-primary">
-    <a href="super" class="btn btn-primary" >Volver </a>
+    <a href="/super" class="btn btn-primary" >Volver </a>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script>

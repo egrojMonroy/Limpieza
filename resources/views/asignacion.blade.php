@@ -37,7 +37,7 @@
             <div class="panel-footer">
                 <input type="submit"  class="btn btn-primary btn-md" value="Asignar">
             </div>
-            <a href="super" class="btn btn-primary" >Volver </a>
+            <a href="/super" class="btn btn-primary" >Volver </a>
 
         </div>
         <div class="col-sm-7">
